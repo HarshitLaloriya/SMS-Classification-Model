@@ -1,0 +1,151 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: "K2D", sans-serif;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+ }
+
+ .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    /* Add more styling as needed */
+}
+
+#gradient-obj img{
+    height: 600px;
+    width: 1100px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+#dev-by img{
+    height: 150px;
+    width: 260px;
+}
+
+.icon-bar {
+    position: fixed;
+    top: 44%;
+    right: 0px;
+    border: none;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+.icon-bar a {
+    display: block;
+    border:none;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    padding-bottom: 8px;
+  }
+  
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 65%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 12px;
+  }
+  .tooltip {
+    position: relative;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  
+  .message-input {
+    width: 350px;
+    padding: 15px 10px 180px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: rgba(1, 1, 1, 0.30);
+    color: #5E5858;
+    font-family: K2D;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none !important;
+    box-shadow: none;
+}
+.predict-button {
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #FFF;
+    font-family: K2D;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background: #171F45;
+    backdrop-filter: blur(2px);
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+}
+.chat-box {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    /* position: relative; */
+    animation: float 3s ease-in-out infinite;
+}
+input:focus::placeholder {
+    color: #fff;
+  }
+
+.icon-bar img{
+    width: 30px;
+    height: 30px;
+}
+
+
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px); /* Adjust the float height as needed */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
