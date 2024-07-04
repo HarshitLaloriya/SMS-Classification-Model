@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS classifier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="icon" type="image/png" href="static/images/HL.png">
+</head>
+<body>
+    <!-- background-video -->
+    <video id="background-video" autoplay loop muted >
+        <source src="static/images/animation/bg.mp4" type="video/mp4">
+    </video>
+
+    <!-- background-content -->
+    <div class="content">
+        <div id="gradient-obj">
+            <img src="static/images/grad.png" alt="img not ava..">
+        </div>
+        <div id="dev-by">
+            <img src="static/images/dev by.png" alt="img not ava...">
+        </div>
+
+        <!-- main-sms-box -->
+        <div class="chat-box">
+            <form action="">
+                <input type="text" class="message-input" placeholder="Type or paste the message here">
+                
+                <!-- predict-button -->
+                <button class="predict-button">Predict</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- side-icon-bar -->
+    <div class="icon-bar">
+        <a href="#" class="linkedin tooltip"><img src="static/images/nav icons/linked in.png"  alt="">
+            <span class="tooltiptext">linkedin</span>
+        </a>
+
+        <a href="#" class="instagram tooltip"><img src="static/images/nav icons/insta.png" alt="">
+            <span class="tooltiptext">instagram</span>
+        </a> 
+
+        <a href="#" class="mail tooltip"><img src="static/images/nav icons/email.png" alt="">
+            <span class="tooltiptext">email</span>
+        </a> 
+
+        <a href="#" class="github tooltip"><img src="static/images/nav icons/github.png" alt="">
+            <span class="tooltiptext">github</span>
+        </a>
+
+        <a href="#" class="twitter tooltip"><img src="static/images/nav icons/twitter.png" alt="">
+            <span class="tooltiptext">twitter</span>
+        </a> 
+    </div>
+
+</body>
+</html>
