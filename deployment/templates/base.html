@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="icon" type="image/png" href="static/images/HL.png">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
     <!-- background-video -->
@@ -24,15 +25,18 @@
         <div id="dev-by">
             <img src="static/images/dev by.png" alt="img not ava...">
         </div>
-
+        
         <!-- main-sms-box -->
         <div class="chat-box">
-            <form action="">
-                <input type="text" class="message-input" placeholder="Type or paste the message here">
-                
+            <form id="sms-form" action="/">
+                <textarea name="sms" class="message-input" placeholder="Type or paste the message here"></textarea>
                 <!-- predict-button -->
-                <button class="predict-button">Predict</button>
+                <button type="button" id="predict-button" class="predict-button">Predict</button>
             </form>
+            <!-- side-output -->
+            <div id="side-output">
+                <img id="output-image" src="static/images/score.png" alt="img not ava...">
+            </div>
         </div>
     </div>
 
@@ -58,6 +62,42 @@
             <span class="tooltiptext">twitter</span>
         </a> 
     </div>
-
+    <script>
+        const predictButton = document.getElementById('predict-button');
+        predictButton.addEventListener('click', async () => {
+            const smsInput = document.querySelector('textarea[name="sms"]');
+            const smsText = smsInput.value.trim();
+    
+            if (smsText) {
+                try {
+                    const response = await fetch('/predict', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ sms: smsText })
+                    });
+    
+                    const result = await response.json();
+                    console.log(result); 
+                    if (result.output === 'HAM') {
+                        console.log("i am here")
+                        const originalImage = document.getElementById('output-image');
+                        originalImage.src = 'static/images/ham.png'; 
+                        originalImage.alt = 'Original image';
+                        
+                    } else {
+                    const originalImage = document.getElementById('output-image');
+                    originalImage.src = 'static/images/spam.png'; 
+                    originalImage.alt = 'Original image';
+                }
+                } catch (error) {
+                    console.error(error);
+                }
+            } else {
+                alert('Please enter a message!');
+            }
+        });
+    </script>
 </body>
 </html>
