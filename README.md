@@ -19,7 +19,7 @@ Welcome to my machine learning project, where I've built a model to classify SMS
 you can clone my repository for work or you can download the dataset by clicking on the link below
 
 # Dataset
-The dataset used for this project is the SMS Spam Collection Dataset, which can be downloaded from Kaggle.
+The dataset used for this project is the SMS Spam Collection Dataset, which can be downloaded from Kaggle.<br>
 **Dataset link :** - https://www.kaggle.com/uciml/sms-spam-collection-dataset
 
 # Project Overview
