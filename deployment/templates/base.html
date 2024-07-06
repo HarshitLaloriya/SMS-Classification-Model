@@ -7,9 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- css loader -->
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <!-- icon loader -->
     <link rel="icon" type="image/png" href="static/images/HL.png">
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
     <!-- background-video -->
@@ -31,7 +32,7 @@
             <form id="sms-form" action="/">
                 <textarea name="sms" class="message-input" placeholder="Type or paste the message here"></textarea>
                 <!-- predict-button -->
-                <button type="button" id="predict-button" class="predict-button">Predict</button>
+                <button type="button" id="predict-button" class="predict-button">classify</button>
             </form>
             <!-- side-output -->
             <div id="side-output">
@@ -42,19 +43,19 @@
 
     <!-- side-icon-bar -->
     <div class="icon-bar">
-        <a href="#" class="linkedin tooltip"><img src="static/images/nav icons/linked in.png"  alt="">
+        <a href="https://www.linkedin.com/in/harshit-laloriya" class="linkedin tooltip" target="_blank"><img src="static/images/nav icons/linked in.png"  alt="">
             <span class="tooltiptext">linkedin</span>
         </a>
 
-        <a href="#" class="instagram tooltip"><img src="static/images/nav icons/insta.png" alt="">
+        <a href="https://www.instagram.com/hellboy.hut/" class="instagram tooltip" target="_blank"><img src="static/images/nav icons/insta.png" alt="">
             <span class="tooltiptext">instagram</span>
         </a> 
 
-        <a href="#" class="mail tooltip"><img src="static/images/nav icons/email.png" alt="">
+        <a href="mailto:officialharshitlaloriya@gmail.com" class="mail tooltip" target="_blank"><img src="static/images/nav icons/email.png" alt="">
             <span class="tooltiptext">email</span>
         </a> 
 
-        <a href="#" class="github tooltip"><img src="static/images/nav icons/github.png" alt="">
+        <a href="https://github.com/HarshitLaloriya" class="github tooltip" target="_blank"><img src="static/images/nav icons/github.png" alt="">
             <span class="tooltiptext">github</span>
         </a>
 
@@ -62,6 +63,8 @@
             <span class="tooltiptext">twitter</span>
         </a> 
     </div>
+
+    <!-- # script  -->
     <script>
         const predictButton = document.getElementById('predict-button');
         predictButton.addEventListener('click', async () => {
@@ -99,5 +102,6 @@
             }
         });
     </script>
+
 </body>
 </html>
